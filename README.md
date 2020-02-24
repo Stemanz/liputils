@@ -7,12 +7,12 @@ Tracking individual residues is is particularly useful when wanting to track how
 
 The ```Lipid``` class takes care of extracting information from the lipid name:
 
-```
+```python
 >>> from liputils import Lipid
 
 >>> l = Lipid("PG 18:1/20:1", amount=0.012512)
 
->>> l.mass                                                                                                                               
+>>> l.mass
 802.5724
 
 >>> l.lipid_class()
@@ -31,7 +31,7 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 \
 The number of molecules is calculated from the ```amount``` parameter, defaulting to picomoles. This can be changed:
 
-```
+```python
 >>> l = Lipid("PG 18:1/20:1", amount=0.012512, unit="femtomoles")
 
 >>> l.molecules
@@ -41,7 +41,7 @@ The number of molecules is calculated from the ```amount``` parameter, defaultin
 \
 In the case of unresolved ambiguities of the lipid isomers, it is possible to either extract all of them and choose how to manage that information by taking into consideration how many ambiguities there are:
 
-```
+```python
 >>> l = Lipid("TAG 48:2 total (14:0/16:0/18:2)(14:0/16:1/18:1)(16:0/16:1/16:1)")
 
 >>> l.residues()                
@@ -51,7 +51,7 @@ In the case of unresolved ambiguities of the lipid isomers, it is possible to ei
 \
 Or, it is possible to reject non unambiguous lipids altogether by calling ```.residues()``` with the ```drop_ambiguous``` parameter:
 
-```
+```python
 >>> l = Lipid("PG 18:1/20:1")               
 
 >>> l.residues(drop_ambiguous=True)             
