@@ -66,6 +66,7 @@ Or, it is possible to reject non unambiguous lipids altogether by calling ```.re
 Lipidomics data should be loaded in a ```pandas.DataFrame``` table. The accepted format is a vertical index with lipid names, and samples in column. Just like this:
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
 
+
 ```make_residues_table``` will take care of dropping non-numerical columns, as well as to trim the lipid list of elements that should not be processed, like total lipid class counts. These can be further specified through the ```unwanted``` parameter.
 Getting the transformed table is super easy:
 ```python
@@ -74,7 +75,8 @@ res = make_residues_table(df)
 ```
 \
 In ```res```, we will find the resulting table:
-![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
+
 
 That's it! For further info, don't forget to investigate around:
 
