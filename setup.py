@@ -11,7 +11,6 @@ with open("LICENSE") as f:
 
 setup(
     name="liputils",
-    packages = ["liputils"],
     version="0.1",
     description="Picks individual fatty acids from individual complex lipids",
     long_description=readme,
