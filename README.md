@@ -18,7 +18,7 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 >>> l.lipid_class()
 'PG'
 
->>> l.ID
+>>> l.name
 'PG 18:1/20:1'
 
 >>> l.residues()
