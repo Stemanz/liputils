@@ -10,7 +10,8 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 ```
 >>> from liputils import Lipid
 
->>> l = Lipid("PG 18:1/20:1", amount=0.012512)                                                                                                                                
+>>> l = Lipid("PG 18:1/20:1", amount=0.012512)
+
 >>> l.mass                                                                                                                               
 802.5724
 
@@ -31,7 +32,7 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 The number of molecules is calculated from the ```amount``` parameter, defaulting to picomoles. This can be changed:
 
 ```
->>> l = Lipid("PG 18:1/20:1", amount=0.012512, unit="femtomoles")                   
+>>> l = Lipid("PG 18:1/20:1", amount=0.012512, unit="femtomoles")
 
 >>> l.molecules
 7534902.640278401
@@ -51,13 +52,13 @@ In the case of unresolved ambiguities of the lipid isomers, it is possible to ei
 Or, it is possible to reject non unambiguous lipids altogether by calling ```.residues()``` with the ```drop_ambiguous``` parameter:
 
 ```
->>> l = Lipid("PG 18:1/20:1")                                                                                                                                                 
+>>> l = Lipid("PG 18:1/20:1")               
 
 >>> l.residues(drop_ambiguous=True)             
 (['18:1', '20:1'], 1)
 
 
->>> l =Lipid("TAG 48:2 total (14:0/16:0/18:2)(14:0/16:1/18:1)(16:0/16:1/16:1)")
+>>> l = Lipid("TAG 48:2 total (14:0/16:0/18:2)(14:0/16:1/18:1)(16:0/16:1/16:1)")
 
 >>> l.residues(drop_ambiguous=True)          
 ([], 0)
