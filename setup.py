@@ -3,18 +3,18 @@
 from setuptools import setup, find_packages
 
 
-with open("README.md") as f:
+with open("README.md", "r") as f:
     readme = f.read()
 
-with open("LICENSE") as f:
+with open("LICENSE", "r") as f:
     license = f.read()
 
 setup(
     name="liputils",
     version="0.1",
-    description="Picks individual fatty acids from individual complex lipids",
-    long_description_content_type="text/markdown",
+    description="A small Python package to manipulate complex lipids.",
     long_description=readme,
+    long_description_content_type="text/markdown",
     author="Stefano Manzini",
     author_email="stefano.manzini@gmail.com",
     url="https://github.com/Stemanz/liputils",
