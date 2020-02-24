@@ -29,7 +29,6 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 7534902640.2784
 ```
 \
-\
 The number of molecules is calculated from the ```amount``` parameter, defaulting to picomoles. This can be changed:
 
 ```python
@@ -39,7 +38,6 @@ The number of molecules is calculated from the ```amount``` parameter, defaultin
 7534902.640278401
 ```
 \
-\
 In the case of unresolved ambiguities of the lipid isomers, it is possible to either extract all of them and choose how to manage that information by taking into consideration how many ambiguities there are:
 
 ```python
@@ -48,7 +46,6 @@ In the case of unresolved ambiguities of the lipid isomers, it is possible to ei
 >>> l.residues()                
 (['14:0', '16:0', '18:2', '14:0', '16:1', '18:1', '16:0', '16:1', '16:1'], 3)
 ```
-\
 \
 Or, it is possible to reject non unambiguous lipids altogether by calling ```.residues()``` with the ```drop_ambiguous``` parameter:
 
@@ -68,16 +65,16 @@ Or, it is possible to reject non unambiguous lipids altogether by calling ```.re
 ## One-step lipidomics data conversion
 Lipidomics data should be loaded in a ```pandas.DataFrame``` table. The accepted format is a vertical index with lipid names, and samples in column. Just like this:
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
-\
+
 ```make_residues_table``` will take care of dropping non-numerical columns, as well as to trim the lipid list of elements that should not be processed, like total lipid class counts. These can be further specified through the ```unwanted``` parameter.
 Getting the transformed table is super easy:
 ```python
 # df is out dataframe
 res = make_residues_table(df)
 ```
+\
 In ```res```, we will find the resulting table:
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
-\
 
 That's it! For further info, don't forget to investigate around:
 
