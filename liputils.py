@@ -3,7 +3,9 @@
 # 240220
 
 import re
-from statistics import mean as average # so we don't rely on numpy
+import pandas as pd
+import numpy as np
+from numpy import average
 
 class Lipid:
     """
@@ -39,7 +41,7 @@ class Lipid:
             "picomoles":  6.022140857e+11,
             "femtomoles": 6.022140857e+8,
             "attomoles":  6.022140857e+5,
-            "zeptomoles":  6.022140857e+2
+            "zeptomoles": 6.022140857e+2
         }
 
         double_bond_mass_reduction = 2.0155 # (-CH2-CH2- to -C=C-); also Sigma
@@ -587,3 +589,106 @@ class Lipid:
         else:
             dividend = 1
             return pack_returntuple()
+
+
+def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table",
+                        replace_nan=0, cleanup=True, absolute_amount=False,
+                        unwanted=["total", "fc", "tc"], **kwargs):
+
+    """ takes a pandas DataFrame as input, and outputs a pandas DataFrame what
+    contains individual residues as index, and their amount for every sample/column.
+
+    Parameters
+    ==========
+
+    dataframe: a pandas dataframe of data. Lipid names as index, and samples as columns
+        (just unlike sklearn wants it, but as you might get it from Tableau software
+        tables. Just dataframe.T your table - that would just do the trick).
+
+    drop_ambiguous: <bool> don't take isobars into consideration. Defaults to False. If True,
+        each residue is divided by its uncertainty.
+
+    name: <str> a tag that gets attached to the returned dataframe, so you can use it
+        to save it afterwards. The tag is found in the .name attribute.
+
+    replace_nan: <object> the object you would like to replace your missing values with.
+        It can be set to False, but I would suggest against what.
+
+    cleanup: <bool> Whether to perform a cleanup of unwanted lipids that can be present
+        in the index. Unwanted strings are read from the 'unwanted' parameter. Defaults
+        to True
+    
+    absolute_amount <bool> Wheter to count the individual number of residues, rather to
+        sticking to the same units found in the original table. Defaults to False
+
+    unwanted: <list> <set> <tuple> Strings that must be removed from the lipid index. Defaults
+        to ["total", "fc", "tc"]
+
+    returns:
+    ========
+
+    pandas DataFrame
+
+    """
+    
+    if not isinstance(dataframe, pd.core.frame.DataFrame):
+        raise TypeError("Input table must be a pandas DataFrame")
+
+    df = dataframe._get_numeric_data().copy()
+
+    if replace_nan:
+        df = df.replace(to_replace=np.nan, value=replace_nan)
+
+    if cleanup:
+        # removing some common unwanted lipids from the index,
+        # like total counts and free cholesterol
+        newindex = [x for x in df.index if not x.lower() in unwanted]
+        df = df.reindex(newindex)
+
+
+    # beginning to transform data
+    # ===========================
+    masterlist = []
+
+    # We will slice the dataframe, creating a serie for each sample (c). The index
+    # of the series will hold the individual lipids (like "CE 16:1"), joined
+    # to their values in that sample (c). Yes, I could have called it sample.
+    # For each sample, a dictionary (mm) will be constructed with simple fatty
+    # acids as keys, and their amount as values.
+
+    for c in df.columns:
+        serie = df[c]
+
+        # each column now becomes a series with the index == df.index, and the
+        # corresponding values
+
+        mm = {}
+        for lipid, picomoles in zip(serie.index, serie):
+
+            try:
+                lip = Lipid(lipid, amount = picomoles, **kwargs)
+            except TypeError:
+                print(f"Something went wrong with lipid {lipid} and amount {picomoles}")
+                raise
+
+            residues, coeff = lip.residues(drop_ambiguous=drop_ambiguous)
+            if len(residues) < 0:
+                continue
+            else:
+                for residue in residues:
+                    mm.setdefault(residue, 0)
+
+                    if absolute_amount:
+                        mm[residue] += lip.molecules / coeff # exact number of residues
+                    else:
+                        mm[residue] += lip.amount / coeff # units of residue 
+
+        masterlist.append(mm)
+
+
+    dfinal = pd.concat([pd.DataFrame.from_dict(x, orient="index") for x in masterlist], axis=1)
+    dfinal.columns = df.columns
+
+    dfinal.name = name
+
+    return dfinal
