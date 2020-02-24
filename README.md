@@ -72,13 +72,13 @@ import pandas as pd
 df = pd.read_csv("example_data.csv", index_col=0, sep="\t")
 ```
 
-![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png =50x)
 
 ```python
 from liputils import make_residues_table
 res = make_residues_table(df)
 ```
-![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png =250x)
 
 Don't forget to inspect stuff for further info:
 
