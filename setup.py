@@ -2,12 +2,8 @@
 
 from setuptools import setup, find_packages
 
-
 with open("README.md", "r") as f:
     readme = f.read()
-
-with open("LICENSE", "r") as f:
-    license = f.read()
 
 setup(
     name="liputils",
@@ -19,7 +15,7 @@ setup(
     author_email="stefano.manzini@gmail.com",
     url="https://github.com/Stemanz/liputils",
     download_url="https://github.com/Stemanz/liputils/archive/master.zip",
-    license=license,
+    license="GPL-3.0",
     packages=find_packages(exclude=("tests", "docs", "images")),
     keywords = ['lipids', 'lipids residues', 'lipidomics'],
     install_requires=[
