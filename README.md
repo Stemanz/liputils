@@ -74,6 +74,8 @@ df = pd.read_csv("example_data.csv", index_col=0, sep="\t")
 
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
 
+```make_residues_table``` automatically ignores non-numeric columns. By default, it also tries to remove unwanted things classified within the lipids, such as total lipid classes amounts. Unwanted strings can be specified via the ```unwanted``` parameter.
+
 ```python
 from liputils import make_residues_table
 res = make_residues_table(df)
