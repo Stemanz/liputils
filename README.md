@@ -64,6 +64,7 @@ Or, it is possible to reject non unambiguous lipids altogether by calling ```.re
 
 ## One-step lipidomics data conversion
 Lipidomics data should be loaded in a ```pandas.DataFrame``` table. The accepted format is a vertical index with lipid names, and samples in column. Just like this:
+
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
 
 
@@ -75,6 +76,7 @@ res = make_residues_table(df)
 ```
 \
 In ```res```, we will find the resulting table:
+
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
 
 
