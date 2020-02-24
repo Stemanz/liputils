@@ -39,7 +39,7 @@ The number of molecules is calculated from the ```amount``` parameter, defaultin
 ```
 \
 \
-In the case of unresolved ambiguities of the lipid isomers, it is possible to either extract all of them and choose how to manage that information by taking into consideration how many ambiguities there are:
+In the case of unresolved ambiguities of the lipid isobars, it is possible to either extract all of them and choose how to manage that information (that is up to you) by taking into consideration how many ambiguities there are:
 
 ```python
 >>> l = Lipid("TAG 48:2 total (14:0/16:0/18:2)(14:0/16:1/18:1)(16:0/16:1/16:1)")
