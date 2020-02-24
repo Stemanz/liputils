@@ -1,5 +1,7 @@
 # liputils
-Picks individual fatty acids from individual complex lipids.
+
+## overview
+A small Python library to manipulate molecular lipid species.
 
 ```liputils``` makes it easy to strip fatty acids-like residues from individual molecular lipids. This is done by ```liputils``` by reading the lipid name.
 
@@ -28,7 +30,6 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 7534902640.2784
 ```
 \
-\
 The number of molecules is calculated from the ```amount``` parameter, defaulting to picomoles. This can be changed:
 
 ```python
@@ -38,7 +39,6 @@ The number of molecules is calculated from the ```amount``` parameter, defaultin
 7534902.640278401
 ```
 \
-\
 In the case of unresolved ambiguities of the lipid isobars, it is possible to either extract all of them and choose how to manage that information (that is up to you) by taking into consideration how many ambiguities there are:
 
 ```python
@@ -47,7 +47,6 @@ In the case of unresolved ambiguities of the lipid isobars, it is possible to ei
 >>> l.residues()                
 (['14:0', '16:0', '18:2', '14:0', '16:1', '18:1', '16:0', '16:1', '16:1'], 3)
 ```
-\
 \
 Or, it is possible to reject non unambiguous lipids altogether by calling ```.residues()``` with the ```drop_ambiguous``` parameter:
 
@@ -63,3 +62,24 @@ Or, it is possible to reject non unambiguous lipids altogether by calling ```.re
 >>> l.residues(drop_ambiguous=True)          
 ([], 0)
 ```
+
+## Pulling individual residues from a data table
+
+```liputils``` assumes data to be loades as a ```pandas.Dataframe```, with lipids as vertical index, with samples on columns. Data processing is really simple:
+
+```python
+>>> import pandas as pd
+>>> df = pd.read_csv("example_data.csv", index_col=0, sep="\t")
+>>> res.head(6)
+```
+
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
+
+```python
+>>> from liputils import make_residues_table
+>>> res = make_residues_table(df)
+>>> res.head(6)
+```
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
+
+
