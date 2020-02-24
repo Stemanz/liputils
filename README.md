@@ -1,5 +1,5 @@
 # liputils
-Picks individual fatty acids from individual complex lipids
+Picks individual fatty acids from individual complex lipids.
 
 ```liputils``` makes it easy to strip fatty acids-like residues from individual molecular lipids. This is done by ```liputils``` by reading the lipid name.
 
