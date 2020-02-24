@@ -65,21 +65,60 @@ Or, it is possible to reject non unambiguous lipids altogether by calling ```.re
 
 ## Pulling individual residues from a data table
 
-```liputils``` assumes data to be loades as a ```pandas.Dataframe```, with lipids as vertical index, with samples on columns. Data processing is really simple:
+```liputils``` assumes data to be loades as a ```pandas.Dataframe```, with lipids as vertical index and with samples on columns. Data processing is really simple:
 
 ```python
->>> import pandas as pd
->>> df = pd.read_csv("example_data.csv", index_col=0, sep="\t")
->>> res.head(6)
+import pandas as pd
+df = pd.read_csv("example_data.csv", index_col=0, sep="\t")
 ```
 
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
 
 ```python
->>> from liputils import make_residues_table
->>> res = make_residues_table(df)
->>> res.head(6)
+from liputils import make_residues_table
+res = make_residues_table(df)
 ```
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
 
+Don't forget to inspect stuff for further info:
 
+```python
+>>> help(make_residues_table)
+
+make_residues_table(dataframe, *, drop_ambiguous=False, name='residues_table',
+                    replace_nan=0, cleanup=True, absolute_amount=False,
+                    unwanted=['total', 'fc', 'tc'], **kwargs)
+    takes a pandas DataFrame as input, and outputs a pandas DataFrame what
+    contains individual residues as index, and their amount for every sample/column.
+    
+    Parameters
+    ==========
+    
+    dataframe: a pandas dataframe of data. Lipid names as index, and samples as columns
+        (just unlike sklearn wants it, but as you might get it from Tableau software
+        tables. Just dataframe.T your table - that would just do the trick).
+    
+    drop_ambiguous: <bool> don't take isobars into consideration. Defaults to False. If True,
+        each residue is divided by its uncertainty.
+    
+    name: <str> a tag that gets attached to the returned dataframe, so you can use it
+        to save it afterwards. The tag is found in the .name attribute.
+    
+    replace_nan: <object> the object you would like to replace your missing values with.
+        It can be set to False, but I would suggest against what.
+    
+    cleanup: <bool> Whether to perform a cleanup of unwanted lipids that can be present
+        in the index. Unwanted strings are read from the 'unwanted' parameter. Defaults
+        to True
+    
+    absolute_amount <bool> Wheter to count the individual number of residues, rather to
+        sticking to the same units found in the original table. Defaults to False
+    
+    unwanted: <list> <set> <tuple> Strings that must be removed from the lipid index. Defaults
+        to ["total", "fc", "tc"]
+    
+    returns:
+    ========
+    
+    pandas DataFrame
+```
