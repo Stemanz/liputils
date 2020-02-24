@@ -85,3 +85,36 @@ That's it! For further info, don't forget to investigate around:
 ```python
 help(make_residues_table)
 ```
+
+```
+Parameters
+==========
+
+dataframe: a pandas dataframe of data. Lipid names as index, and samples as columns
+    (just unlike sklearn wants it, but as you might get it from Tableau software
+    tables. Just dataframe.T your table - that would just do the trick).
+
+drop_ambiguous: <bool> don't take isobars into consideration. Defaults to False. If True,
+    each residue is divided by its uncertainty.
+
+name: <str> a tag that gets attached to the returned dataframe, so you can use it
+    to save it afterwards. The tag is found in the .name attribute.
+
+replace_nan: <object> the object you would like to replace your missing values with.
+    It can be set to False, but I would suggest against what.
+
+cleanup: <bool> Whether to perform a cleanup of unwanted lipids that can be present
+    in the index. Unwanted strings are read from the 'unwanted' parameter. Defaults
+    to True
+
+absolute_amount <bool> Wheter to count the individual number of residues, rather to
+    sticking to the same units found in the original table. Defaults to False
+
+unwanted: <list> <set> <tuple> Strings that must be removed from the lipid index. Defaults
+    to ["total", "fc", "tc"]
+
+returns:
+========
+
+pandas DataFrame
+```
