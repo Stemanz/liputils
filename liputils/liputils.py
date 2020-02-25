@@ -692,3 +692,7 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
     dfinal.name = name
 
     return dfinal
+
+
+__all__ = ("Lipid", "make_residues_table")
+
