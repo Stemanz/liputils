@@ -485,7 +485,7 @@ class Lipid:
         """
         Attribution of given lipid to a class.
         """
-        string = self.ID
+        string = self.name
         
         # when working with whole classes, there's no PC or PE followed by digits.
         if string in ("PC", "PE"):
@@ -537,7 +537,7 @@ class Lipid:
         returns (["16:0", "18":"1", "18":"3", "16:0", "18":"2", "18":"2"], 2)
         if drop_ambiguous = False; else it returns ([], 0)
         """
-        lipid = self.ID
+        lipid = self.name
         lipid_residue = r"([\d]*:[\d]*)"  # what we want
         match = re.findall(lipid_residue, lipid)
     
@@ -595,7 +595,7 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
                         replace_nan=0, cleanup=True, absolute_amount=False,
                         unwanted=["total", "fc", "tc"], **kwargs):
 
-    """ takes a pandas DataFrame as input, and outputs a pandas DataFrame what
+    """ takes a pandas DataFrame as input, and outputs a pandas DataFrame that
     contains individual residues as index, and their amount for every sample/column.
 
     Parameters
@@ -621,8 +621,8 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
     absolute_amount <bool> Wheter to count the individual number of residues, rather to
         sticking to the same units found in the original table. Defaults to False
 
-    unwanted: <list> <set> <tuple> Strings that must be removed from the lipid index. Defaults
-        to ["total", "fc", "tc"]
+    unwanted: <list> <set> <tuple> Strings that must be removed from the lipid index.
+        Defaults to ["total", "fc", "tc"]
 
     returns:
     ========
