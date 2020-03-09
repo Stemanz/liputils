@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="liputils",
-    version="0.12",
+    version="0.13",
     description="A small Python package to manipulate complex lipids.",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -16,7 +16,7 @@ setup(
     url="https://github.com/Stemanz/liputils",
     download_url="https://github.com/Stemanz/liputils/archive/master.zip",
     license="GPL-3.0",
-    packages=find_packages(exclude=("tests", "docs", "images")),
+    packages=find_packages(exclude=("tests", "docs", "images", "devel")),
     keywords = ['lipids', 'lipids residues', 'lipidomics'],
     install_requires=[
           'numpy',
