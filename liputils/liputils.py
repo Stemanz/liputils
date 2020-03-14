@@ -343,7 +343,6 @@ class Lipid:
             for a failed search (must go through all of them)
             
             Special, alkinyl-fatty acids (with C≡C insaturations) are NOT decoded.
-            l
             Other compounds could get decoded, even if decoding them is **not the primary
             goal** of this function. To allow to try and decode other fatty compounds,
             set target molecule to True (default) . It is possible to exclude recognition
@@ -1168,7 +1167,7 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
         to save it afterwards. The tag is found in the .name attribute.
 
     replace_nan: <object> the object you would like to replace your missing values with.
-        It can be set to False, but I would suggest against what.
+        It can be set to False, but I would suggest against that.
 
     cleanup: <bool> Whether to perform a cleanup of unwanted lipids that can be present
         in the index. Unwanted strings are read from the 'unwanted' parameter. Defaults
@@ -1199,7 +1198,9 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
 
     df = dataframe._get_numeric_data().copy()
 
-    if replace_nan:
+    if replace_nan == 0:
+        df = df.replace(to_replace=np.nan, value=0)
+    elif replace_nan is not False:
         df = df.replace(to_replace=np.nan, value=replace_nan)
 
     if cleanup:
