@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="liputils",
-    version="0.13",
+    version="0.14",
     description="A small Python package to manipulate complex lipids.",
     long_description=readme,
     long_description_content_type="text/markdown",
