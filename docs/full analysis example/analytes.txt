@@ -1,0 +1,1062 @@
+Factors
+CL 70:1
+CL 70:5
+CL 74:1
+CL 74:7
+CL 82:13
+FFA(20:0)
+FFA(20:1)
+FFA(20:2)
+FFA(22:0)
+FFA(22:1)
+FFA(22:2)
+FFA(22:3)
+FFA(24:0)
+FFA(24:1)
+FFA(24:2)
+FFA(24:3)
+FFA(Arachidonic acid)
+PC 28:0
+PC 30:0
+PC 30:1
+PC 32:0
+PC 32:1
+PC 32:2
+PC 33:0
+PC 33:1
+PC 34:0
+PC 34:1
+PC 34:2
+PC 34:3
+PC 34:4
+PC 35:1
+PC 35:2
+PC 35:4
+PC 36:1
+PC 36:2
+PC 36:3
+PC 36:4
+PC 36:5
+PC 36:6
+PC 37:2
+PC 37:3
+PC 37:4
+PC 37:5
+PC 38:2
+PC 38:3
+PC 38:4
+PC 38:4
+PC 38:5
+PC 38:6
+PC 38:6
+PC 38:7
+PC 39:4
+PC 39:6
+PC 40:4
+PC 40:6
+PC 40:7
+PC 40:8
+PC 42:4
+PC 42:5
+PE 32:1
+PE 34:0
+PE 34:1
+PE 34:2
+PE 34:3
+PE 35:2
+PE 36:0
+PE 36:1
+PE 36:2
+PE 36:3
+PE 36:4
+PE 36:5
+PE 37:4
+PE 38:3
+PE 38:4
+PE 38:5
+PE 38:6
+PE 40:5
+PE 40:6
+PE 40:7
+PE 40:8
+PG 34:0
+PG 36:0
+PG 36:2
+PI 34:1
+PI 34:2
+PI 36:2
+PI 36:4
+PI 37:4
+PI 38:3
+PI 38:4
+PI 38:5
+PI 38:6
+lysoPE 16:0
+lysoPE 18:0
+lysoPE 18:1
+lysoPE 18:2
+lysoPE 20:3
+lysoPE 20:4
+lysoPE 20:5
+lysoPE 22:4
+lysoPE 22:5
+lysoPE 22:6
+plasmenyl-PE 34:0
+plasmenyl-PE 34:1
+plasmenyl-PE 34:2
+plasmenyl-PE 34:3
+plasmenyl-PE 36:1
+plasmenyl-PE 36:2
+plasmenyl-PE 36:3
+plasmenyl-PE 36:4
+plasmenyl-PE 36:5
+plasmenyl-PE 38:1
+plasmenyl-PE 38:2
+plasmenyl-PE 38:3
+plasmenyl-PE 38:4
+plasmenyl-PE 38:4
+plasmenyl-PE 38:5
+plasmenyl-PE 38:6
+plasmenyl-PE 40:4
+plasmenyl-PE 40:5
+plasmenyl-PE 40:6
+plasmenyl-PE 42:5
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name
+CL 70:1
+CL 70:5
+CL 74:1
+CL 74:7
+CL 82:13
+FFA(20:0)
+FFA(20:1)
+FFA(20:2)
+FFA(22:0)
+FFA(22:1)
+FFA(22:2)
+FFA(22:3)
+FFA(24:0)
+FFA(24:1)
+FFA(24:2)
+FFA(24:3)
+FFA(Arachidonic acid)
+PC 28:0
+PC 30:0
+PC 30:1
+PC 32:0
+PC 32:1
+PC 32:2
+PC 33:0
+PC 33:1
+PC 34:0
+PC 34:1
+PC 34:2
+PC 34:3
+PC 34:4
+PC 35:1
+PC 35:2
+PC 35:4
+PC 36:1
+PC 36:2
+PC 36:3
+PC 36:4
+PC 36:5
+PC 36:6
+PC 37:2
+PC 37:3
+PC 37:4
+PC 37:5
+PC 38:2
+PC 38:3
+PC 38:4
+PC 38:4
+PC 38:5
+PC 38:6
+PC 38:6
+PC 38:7
+PC 39:4
+PC 39:6
+PC 40:4
+PC 40:6
+PC 40:7
+PC 40:8
+PC 42:4
+PC 42:5
+PE 32:1
+PE 34:0
+PE 34:1
+PE 34:2
+PE 34:3
+PE 35:2
+PE 36:0
+PE 36:1
+PE 36:2
+PE 36:3
+PE 36:4
+PE 36:5
+PE 37:4
+PE 38:3
+PE 38:4
+PE 38:5
+PE 38:6
+PE 40:5
+PE 40:6
+PE 40:7
+PE 40:8
+PG 34:0
+PG 36:0
+PG 36:2
+PI 34:1
+PI 34:2
+PI 36:2
+PI 36:4
+PI 37:4
+PI 38:3
+PI 38:4
+PI 38:5
+PI 38:6
+lysoPE 16:0
+lysoPE 18:0
+lysoPE 18:1
+lysoPE 18:2
+lysoPE 20:3
+lysoPE 20:4
+lysoPE 20:5
+lysoPE 22:4
+lysoPE 22:5
+lysoPE 22:6
+plasmenyl-PE 34:0
+plasmenyl-PE 34:1
+plasmenyl-PE 34:2
+plasmenyl-PE 34:3
+plasmenyl-PE 36:1
+plasmenyl-PE 36:2
+plasmenyl-PE 36:3
+plasmenyl-PE 36:4
+plasmenyl-PE 36:5
+plasmenyl-PE 38:1
+plasmenyl-PE 38:2
+plasmenyl-PE 38:3
+plasmenyl-PE 38:4
+plasmenyl-PE 38:4
+plasmenyl-PE 38:5
+plasmenyl-PE 38:6
+plasmenyl-PE 40:4
+plasmenyl-PE 40:5
+plasmenyl-PE 40:6
+plasmenyl-PE 42:5
+Factors
+546.3560+@2.49
+572.3716+@2.6
+591.5634+@11.2
+664.6032+@9.27
+666.618+@11.29
+668.6032+@9.28
+690.6189+@10.65
+756.5543+@4.18
+762.6015+@6.39
+771.6380+@9.26
+780.5553+@4.31
+782.5700+@5.13
+784.5856+@5.18
+807.6380+@7.38
+808.5856+@5.08
+810.6008+@5.37
+830.5700+@6.51
+836.6170@7.00
+870.7546+@9.16
+872.7702+@9.37
+946.8797+@11.25
+CE(16:0)
+CE(16:1)
+CE(18:0)
+CE(18:1)
+CE(18:2)
+CE(18:3)
+CE(20:2)
+CE(20:3)
+CE(20:4)
+CE(20:5)
+CE(22:4)
+CE(22:5)
+CE(22:6)
+Cer(d34:1)
+Cer(d36:0)
+Cer(d36:1)
+Cer(d41:1)
+Cer(d42:1)
+Cer(d42:1)
+Cer(d42:1)
+Cer(d42:2)
+Cer(d42:2)
+Cer(t44:1)
+Cer(t45:1)
+CerP(t39:1)
+DG 32:0
+DG 32:1
+DG 32:2
+DG 33:2
+DG 34:0
+DG 34:2
+DG 34:3
+DG 35:1
+DG 35:2
+DG 36:0
+DG 36:1
+DG 36:2
+DG 36:3
+DG 36:4
+DG 36:5
+DG 38:1
+DG 38:2
+DG 38:3
+DG 38:4
+DG 38:5
+DG 38:6
+DG 40:6
+DG 40:7
+DG(60:1)
+IS CE 17:0
+IS Ceramide
+IS D31-TAG
+IS DG 34:1
+IS MG 17:0
+IS PC 34:0
+IS PE 34:0
+IS PS 34:0
+IS SM 35:1
+IS TG 51:0
+IS d5-DAG
+IS lysoPC 17:0
+LPC(20:2)
+LPC(22:1)
+LPC(32:0)
+LPC(P-18:0)
+LPE(32:1)
+LPE(P-16:0)
+LPE(P-18:0)
+LPE(P-20:0)
+MG 17:0
+PA(P-47:3)
+PC 19:1
+PC 26:0
+PC 29:0
+PC 30:0
+PC 30:0
+PC 30:1
+PC 30:3
+PC 32:0
+PC 32:1
+PC 32:2
+PC 32:3
+PC 33:2
+PC 33:2
+PC 33:3
+PC 34:4
+PC 34:4
+PC 34:5
+PC 35:5
+PC 36:4
+PC 36:5
+PC 36:6
+PC 36:7
+PC 37:1
+PC 37:6
+PC 38:6
+PC 38:7
+PC 38:7
+PC 38:8
+PC 38:9
+PC 39:3
+PC 39:4
+PC 40:10
+PC 40:2
+PC 40:4
+PC 40:5
+PC 40:9
+PC 42:10
+PC 42:2
+PC 42:4
+PC 42:8
+PC 42:9
+PC 44:5
+PC(28:0)
+PC(31:0)
+PC(31:1)
+PC(32:0)
+PC(32:1)
+PC(32:2)
+PC(33:1)
+PC(34:0)
+PC(34:1)
+PC(34:2)
+PC(34:3)
+PC(35:1)
+PC(35:3)
+PC(35:3)
+PC(36:1)
+PC(36:2)
+PC(36:3)
+PC(36:4)
+PC(36:5)
+PC(37:5)
+PC(38:2)
+PC(38:3)
+PC(38:4)
+PC(38:5)
+PC(38:6)
+PC(40:1)
+PC(40:3)
+PC(40:6)
+PC(40:7)
+PC(40:8)
+PC(42:3)
+PC(42:7)
+PC(O-36:0)
+PC(O-38:1)
+PE 34:2
+PE 36:0
+PE 36:1
+PE 36:2
+PE 36:3
+PE 36:3
+PE 36:4
+PE 36:5
+PE 38:4
+PE 38:5
+PE 38:6
+PE(34:1)
+PE(40:6)
+PI(34:1)
+PI(36:2)
+PI(36:3)
+PI(36:4)
+PI(38:3)
+PI(38:4)
+PI(38:5)
+PS(36:2)
+PS(40:4)
+SM 21:0
+SM 21:1
+SM 29:1
+SM 30:0
+SM 30:1
+SM 30:1
+SM 31:1
+SM 32:0
+SM 32:1
+SM 32:1
+SM 32:2
+SM 32:2
+SM 33:0
+SM 33:1
+SM 33:1
+SM 33:2
+SM 34:1
+SM 34:1
+SM 34:2
+SM 34:2
+SM 35:0
+SM 35:2
+SM 36:0
+SM 36:1
+SM 36:1
+SM 36:2
+SM 36:2
+SM 37:1
+SM 37:2
+SM 38:1
+SM 38:1
+SM 38:2
+SM 38:4
+SM 39:0
+SM 39:1
+SM 39:1
+SM 39:2
+SM 40:1
+SM 40:1
+SM 40:2
+SM 40:2
+SM 40:4
+SM 41:1
+SM 41:1
+SM 41:2
+SM 41:2
+SM 41:4
+SM 42:1
+SM 42:1
+SM 42:2
+SM 42:2
+SM 42:4
+SM 42:5
+SM 43:1
+SM 43:1
+SM 43:2
+SM 43:5
+SM 44:1
+SM 44:2
+SM(d34:0)
+SM(d44:1)
+SM(t36:0)
+SM(t42:2)
+SM(t45:1)
+TG 40:0
+TG 40:1
+TG 42:0
+TG 42:0
+TG 42:1
+TG 44:1
+TG 44:2
+TG 46:0
+TG 46:1
+TG 46:2
+TG 46:3
+TG 48:0
+TG 48:1
+TG 48:1
+TG 48:2
+TG 48:3
+TG 49:0
+TG 49:1
+TG 49:2
+TG 49:3
+TG 49:4
+TG 50:0
+TG 50:1
+TG 50:1
+TG 50:2
+TG 50:2
+TG 50:3
+TG 50:4
+TG 50:5
+TG 51:0
+TG 51:1
+TG 51:2
+TG 51:3
+TG 51:4
+TG 51:5
+TG 52:0
+TG 52:1
+TG 52:1
+TG 52:2
+TG 52:3
+TG 52:4
+TG 52:5
+TG 52:6
+TG 52:7
+TG 53:0
+TG 53:1
+TG 53:2
+TG 53:3
+TG 53:4
+TG 53:5
+TG 53:6
+TG 53:7
+TG 53:7
+TG 54:0
+TG 54:1
+TG 54:2
+TG 54:3
+TG 54:4
+TG 54:5
+TG 54:6
+TG 54:7
+TG 54:7
+TG 54:8
+TG 55:1
+TG 55:2
+TG 55:3
+TG 55:4
+TG 55:6
+TG 56:1
+TG 56:10
+TG 56:2
+TG 56:3
+TG 56:4
+TG 56:5
+TG 56:6
+TG 56:7
+TG 56:8
+TG 56:9
+TG 57:1
+TG 58:0
+TG 58:1
+TG 58:10
+TG 58:11
+TG 58:2
+TG 58:3
+TG 58:4
+TG 58:5
+TG 58:6
+TG 58:7
+TG 58:8
+TG 58:9
+TG 60:10
+TG 60:11
+TG 60:12
+TG 60:8
+TG 60:9
+TG 62:1
+TG 62:2
+TG(44:0)
+TG(52:1)
+TG(57:2)
+TG(57:3)
+TG(60:1)
+TG(O-50:0)
+lysoPC 14:0
+lysoPC 15:0
+lysoPC 16:0
+lysoPC 16:1
+lysoPC 17:1
+lysoPC 18:0
+lysoPC 18:1
+lysoPC 18:2
+lysoPC 18:3
+lysoPC 19:0
+lysoPC 20:0
+lysoPC 20:0
+lysoPC 20:1
+lysoPC 20:3
+lysoPC 20:4
+lysoPC 20:5
+lysoPC 22:0
+lysoPC 22:4
+lysoPC 22:5
+lysoPC 22:6
+lysoPC 24:0
+lysoPC 24:1
+lysoPE 16:0
+lysoPE 18:0
+lysoPE 18:1
+lysoPE 18:2
+lysoPE 18:3
+lysoPE 20:4
+lysoPE 22:6
+plasmenyl-PC 18:0
+plasmenyl-PC 44:4
+plasmenyl-PE 34:1
+plasmenyl-PE 34:2
+plasmenyl-PE 36:1
+plasmenyl-PE 36:2
+plasmenyl-PE 36:3
+plasmenyl-PE 36:4
+plasmenyl-PE 36:5
+plasmenyl-PE 38:2
+plasmenyl-PE 38:3
+plasmenyl-PE 38:4
+plasmenyl-PE 38:5
+plasmenyl-PE 38:6
+plasmenyl-PE 40:4
+plasmenyl-PE 40:5
+plasmenyl-PE 40:6
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name
+546.3560+@2.49
+572.3716+@2.6
+591.5634+@11.2
+664.6032+@9.27
+666.618+@11.29
+668.6032+@9.28
+690.6189+@10.65
+756.5543+@4.18
+762.6015+@6.39
+771.6380+@9.26
+780.5553+@4.31
+782.5700+@5.13
+784.5856+@5.18
+807.6380+@7.38
+808.5856+@5.08
+810.6008+@5.37
+830.5700+@6.51
+836.6170@7.00
+870.7546+@9.16
+872.7702+@9.37
+946.8797+@11.25
+CE(16:0)
+CE(16:1)
+CE(18:0)
+CE(18:1)
+CE(18:2)
+CE(18:3)
+CE(20:2)
+CE(20:3)
+CE(20:4)
+CE(20:5)
+CE(22:4)
+CE(22:5)
+CE(22:6)
+Cer(d34:1)
+Cer(d36:0)
+Cer(d36:1)
+Cer(d41:1)
+Cer(d42:1)
+Cer(d42:1)
+Cer(d42:1)
+Cer(d42:2)
+Cer(d42:2)
+Cer(t44:1)
+Cer(t45:1)
+CerP(t39:1)
+DG 32:0
+DG 32:1
+DG 32:2
+DG 33:2
+DG 34:0
+DG 34:2
+DG 34:3
+DG 35:1
+DG 35:2
+DG 36:0
+DG 36:1
+DG 36:2
+DG 36:3
+DG 36:4
+DG 36:5
+DG 38:1
+DG 38:2
+DG 38:3
+DG 38:4
+DG 38:5
+DG 38:6
+DG 40:6
+DG 40:7
+DG(60:1)
+IS CE 17:0
+IS Ceramide
+IS D31-TAG
+IS DG 34:1
+IS MG 17:0
+IS PC 34:0
+IS PE 34:0
+IS PS 34:0
+IS SM 35:1
+IS TG 51:0
+IS d5-DAG
+IS lysoPC 17:0
+LPC(20:2)
+LPC(22:1)
+LPC(32:0)
+LPC(P-18:0)
+LPE(32:1)
+LPE(P-16:0)
+LPE(P-18:0)
+LPE(P-20:0)
+MG 17:0
+PA(P-47:3)
+PC 19:1
+PC 26:0
+PC 29:0
+PC 30:0
+PC 30:0
+PC 30:1
+PC 30:3
+PC 32:0
+PC 32:1
+PC 32:2
+PC 32:3
+PC 33:2
+PC 33:2
+PC 33:3
+PC 34:4
+PC 34:4
+PC 34:5
+PC 35:5
+PC 36:4
+PC 36:5
+PC 36:6
+PC 36:7
+PC 37:1
+PC 37:6
+PC 38:6
+PC 38:7
+PC 38:7
+PC 38:8
+PC 38:9
+PC 39:3
+PC 39:4
+PC 40:10
+PC 40:2
+PC 40:4
+PC 40:5
+PC 40:9
+PC 42:10
+PC 42:2
+PC 42:4
+PC 42:8
+PC 42:9
+PC 44:5
+PC(28:0)
+PC(31:0)
+PC(31:1)
+PC(32:0)
+PC(32:1)
+PC(32:2)
+PC(33:1)
+PC(34:0)
+PC(34:1)
+PC(34:2)
+PC(34:3)
+PC(35:1)
+PC(35:3)
+PC(35:3)
+PC(36:1)
+PC(36:2)
+PC(36:3)
+PC(36:4)
+PC(36:5)
+PC(37:5)
+PC(38:2)
+PC(38:3)
+PC(38:4)
+PC(38:5)
+PC(38:6)
+PC(40:1)
+PC(40:3)
+PC(40:6)
+PC(40:7)
+PC(40:8)
+PC(42:3)
+PC(42:7)
+PC(O-36:0)
+PC(O-38:1)
+PE 34:2
+PE 36:0
+PE 36:1
+PE 36:2
+PE 36:3
+PE 36:3
+PE 36:4
+PE 36:5
+PE 38:4
+PE 38:5
+PE 38:6
+PE(34:1)
+PE(40:6)
+PI(34:1)
+PI(36:2)
+PI(36:3)
+PI(36:4)
+PI(38:3)
+PI(38:4)
+PI(38:5)
+PS(36:2)
+PS(40:4)
+SM 21:0
+SM 21:1
+SM 29:1
+SM 30:0
+SM 30:1
+SM 30:1
+SM 31:1
+SM 32:0
+SM 32:1
+SM 32:1
+SM 32:2
+SM 32:2
+SM 33:0
+SM 33:1
+SM 33:1
+SM 33:2
+SM 34:1
+SM 34:1
+SM 34:2
+SM 34:2
+SM 35:0
+SM 35:2
+SM 36:0
+SM 36:1
+SM 36:1
+SM 36:2
+SM 36:2
+SM 37:1
+SM 37:2
+SM 38:1
+SM 38:1
+SM 38:2
+SM 38:4
+SM 39:0
+SM 39:1
+SM 39:1
+SM 39:2
+SM 40:1
+SM 40:1
+SM 40:2
+SM 40:2
+SM 40:4
+SM 41:1
+SM 41:1
+SM 41:2
+SM 41:2
+SM 41:4
+SM 42:1
+SM 42:1
+SM 42:2
+SM 42:2
+SM 42:4
+SM 42:5
+SM 43:1
+SM 43:1
+SM 43:2
+SM 43:5
+SM 44:1
+SM 44:2
+SM(d34:0)
+SM(d44:1)
+SM(t36:0)
+SM(t42:2)
+SM(t45:1)
+TG 40:0
+TG 40:1
+TG 42:0
+TG 42:0
+TG 42:1
+TG 44:1
+TG 44:2
+TG 46:0
+TG 46:1
+TG 46:2
+TG 46:3
+TG 48:0
+TG 48:1
+TG 48:1
+TG 48:2
+TG 48:3
+TG 49:0
+TG 49:1
+TG 49:2
+TG 49:3
+TG 49:4
+TG 50:0
+TG 50:1
+TG 50:1
+TG 50:2
+TG 50:2
+TG 50:3
+TG 50:4
+TG 50:5
+TG 51:0
+TG 51:1
+TG 51:2
+TG 51:3
+TG 51:4
+TG 51:5
+TG 52:0
+TG 52:1
+TG 52:1
+TG 52:2
+TG 52:3
+TG 52:4
+TG 52:5
+TG 52:6
+TG 52:7
+TG 53:0
+TG 53:1
+TG 53:2
+TG 53:3
+TG 53:4
+TG 53:5
+TG 53:6
+TG 53:7
+TG 53:7
+TG 54:0
+TG 54:1
+TG 54:2
+TG 54:3
+TG 54:4
+TG 54:5
+TG 54:6
+TG 54:7
+TG 54:7
+TG 54:8
+TG 55:1
+TG 55:2
+TG 55:3
+TG 55:4
+TG 55:6
+TG 56:1
+TG 56:10
+TG 56:2
+TG 56:3
+TG 56:4
+TG 56:5
+TG 56:6
+TG 56:7
+TG 56:8
+TG 56:9
+TG 57:1
+TG 58:0
+TG 58:1
+TG 58:10
+TG 58:11
+TG 58:2
+TG 58:3
+TG 58:4
+TG 58:5
+TG 58:6
+TG 58:7
+TG 58:8
+TG 58:9
+TG 60:10
+TG 60:11
+TG 60:12
+TG 60:8
+TG 60:9
+TG 62:1
+TG 62:2
+TG(44:0)
+TG(52:1)
+TG(57:2)
+TG(57:3)
+TG(60:1)
+TG(O-50:0)
+lysoPC 14:0
+lysoPC 15:0
+lysoPC 16:0
+lysoPC 16:1
+lysoPC 17:1
+lysoPC 18:0
+lysoPC 18:1
+lysoPC 18:2
+lysoPC 18:3
+lysoPC 19:0
+lysoPC 20:0
+lysoPC 20:0
+lysoPC 20:1
+lysoPC 20:3
+lysoPC 20:4
+lysoPC 20:5
+lysoPC 22:0
+lysoPC 22:4
+lysoPC 22:5
+lysoPC 22:6
+lysoPC 24:0
+lysoPC 24:1
+lysoPE 16:0
+lysoPE 18:0
+lysoPE 18:1
+lysoPE 18:2
+lysoPE 18:3
+lysoPE 20:4
+lysoPE 22:6
+plasmenyl-PC 18:0
+plasmenyl-PC 44:4
+plasmenyl-PE 34:1
+plasmenyl-PE 34:2
+plasmenyl-PE 36:1
+plasmenyl-PE 36:2
+plasmenyl-PE 36:3
+plasmenyl-PE 36:4
+plasmenyl-PE 36:5
+plasmenyl-PE 38:2
+plasmenyl-PE 38:3
+plasmenyl-PE 38:4
+plasmenyl-PE 38:5
+plasmenyl-PE 38:6
+plasmenyl-PE 40:4
+plasmenyl-PE 40:5
+plasmenyl-PE 40:6
