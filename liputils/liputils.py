@@ -1153,7 +1153,7 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
     """ takes a pandas DataFrame as input, and outputs a pandas DataFrame that
     contains individual residues as index, and their amount for every sample/column.
 
-    Parameters
+    params:
     ==========
 
     dataframe: a pandas dataframe of data. Lipid names as index, and samples as columns
@@ -1197,6 +1197,8 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
         raise TypeError("Unrecognized lipids data type. Try 'refmet' or None")
 
     df = dataframe._get_numeric_data().copy()
+    if df.shape[1] == 0:
+        raise TypeError("Your table does not apparently contain numerical data.")
 
     if replace_nan == 0:
         df = df.replace(to_replace=np.nan, value=0)
@@ -1264,3 +1266,50 @@ def make_residues_table(dataframe, *, drop_ambiguous=False, name="residues_table
     dfinal.name = name
 
     return dfinal
+
+
+def saturated(stringlike):
+    """ Accepts strings in the form: 20:3
+    Returns True if fatty residue is saturated, False otherwise.
+    
+    params:
+    =======
+    stringlike: <str> like residue, like "20:3"
+    
+    returns:
+    ========
+    True if the residue is saturated, False otherwise
+    """
+    try:
+        sat = int(stringlike[stringlike.find(":")+1:])
+        if sat > 0:
+            return False
+        else:
+            return True
+    except (TypeError, ValueError):
+        raise TypeError(f"'{stringlike}' must be in the form (example): '20:3'")
+
+
+def max_carbon(stringlike, carbon):
+    """ 
+    params:
+    =======
+    stringlike: <str> like residue, like "20:3"
+    carbon    : <int> The maximum number of carbon atoms allowed.
+    
+    returns:
+    ========
+    True if <stringlike> within <carbon> allowed number of residues, False otherwise
+    """
+    if not isinstance(carbon, (int, float)):
+        raise TypeError(f"Max carbon atoms must be a number")
+    
+    try:
+        backbone = int(stringlike[:stringlike.find(":")])
+        
+        if backbone <= carbon:
+            return True
+        else:
+            return False
+    except (TypeError, ValueError):
+        raise TypeError(f"'{stringlike}' must be in the form (example): '20:3'")
