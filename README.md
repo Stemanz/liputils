@@ -62,13 +62,42 @@ Or, it is possible to reject non unambiguous lipids altogether by calling ```.re
 ([], 0)
 ```
 
+## Data formats
+```liputils``` accepts a generic lipid format in the form of ```CLASS N:N/M:M/../..``` or ```CLASS(N:N/M:M/../..)(other mass isomers)```, or fully [RefMet-compliant residue naming](https://www.metabolomicsworkbench.org/databases/refmet/index.php). If unsure about your data format, you can try and batch-translate your lipid IDs with [RefMet's online translator](https://www.metabolomicsworkbench.org/databases/refmet/name_to_refmet_form.php). By adhering to RefMet's nomenclature, any compliant lipid name will be properly managed by ```liputils```'s method ```.refmet_residues()```:
+
+```python
+>>> lip1 = Lipid("octadecatrienoic acid")                                       
+
+>>> lip2 = Lipid("linolenic acid")                                              
+
+>>> lip3 = Lipid("FA(18:3)")
+
+>>> lip1.refmet_residues()                                               
+(['18:3'], 1)
+
+>>> lip2.refmet_residues()                                               
+(['18:3'], 1)
+
+>>> lip3.refmet_residues()                                               
+(['18:3'], 1)
+```
+
+Composite compounds can also be fed to ```liputils```:
+
+```python
+>>> l = Lipid("linoleyl palmitate")
+
+>>> l.refmet_residues()                                                         
+(['18:1', '16:0'], 1)
+```
+
 ## One-step lipidomics data conversion
 Lipidomics data should be loaded in a ```pandas.DataFrame``` table. The accepted format is a vertical index with lipid names, and samples in column. Just like this:
 
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_sample_table.png)
 
 
-```make_residues_table``` will take care of dropping non-numerical columns, as well as to trim the lipid list of elements that should not be processed, like total lipid class counts. These can be further specified through the ```unwanted``` parameter.
+```make_residues_table()``` will take care of dropping non-numerical columns, as well as to trim the lipid list of elements that should not be processed, like total lipid class counts. These can be further specified through the ```unwanted``` parameter.
 Getting the transformed table is super easy:
 ```python
 # df is out dataframe
