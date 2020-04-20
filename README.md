@@ -156,7 +156,7 @@ name: <str> a tag that gets attached to the returned dataframe, so you can use i
     to save it afterwards. The tag is found in the .name attribute.
 
 replace_nan: <object> the object you would like to replace your missing values with.
-    It can be set to False, but I would suggest against what.
+    It can be set to False, but I would suggest against that.
 
 cleanup: <bool> Whether to perform a cleanup of unwanted lipids that can be present
     in the index. Unwanted strings are read from the 'unwanted' parameter. Defaults
