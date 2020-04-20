@@ -27,6 +27,9 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 
 >>> l.molecules
 7534902640.2784
+
+>>> l.amount # the original value is stored here
+0.012512
 ```
 \
 The number of molecules is calculated from the ```amount``` parameter, defaulting to picomoles. This can be changed:
@@ -108,8 +111,26 @@ In ```res```, we will find the resulting table:
 
 ![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
 
+To focus on particular residues, it is possible to mix ```saturated()``` and ```max_carbon()``` to dictate which residues to keep in the index and which to discard:
 
-That's it! For further info, don't forget to investigate around:
+
+```python
+>>> saturated("12:0")
+True
+
+>>>max_carbon("12:0", 16)
+True
+
+>>>max_carbon("21:3", 16)
+False
+
+>>> my_lipids = ["12:0", "17:1", "24:0", "24:1", "24:2", "26:3"]
+>>> [not saturated(x) and max_carbon(x, 24) for x in my_lipids]
+[False, True, False, True, True, False]
+```
+
+
+For further info, don't forget to investigate around:
 
 ```python
 help(make_residues_table)
