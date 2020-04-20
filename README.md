@@ -103,6 +103,8 @@ Lipidomics data should be loaded in a ```pandas.DataFrame``` table. The accepted
 ```make_residues_table()``` will take care of dropping non-numerical columns, as well as to trim the lipid list of elements that should not be processed, like total lipid class counts. These can be further specified through the ```unwanted``` parameter.
 Getting the transformed table is super easy:
 ```python
+from liputils import make_residues_table
+
 # df is out dataframe
 res = make_residues_table(df)
 ```
@@ -115,6 +117,8 @@ To focus on particular residues, it is possible to mix ```saturated()``` and ```
 
 
 ```python
+from liputils import saturated, max_carbon
+
 >>> saturated("12:0")
 True
 
