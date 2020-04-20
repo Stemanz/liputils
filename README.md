@@ -122,10 +122,10 @@ from liputils import saturated, max_carbon
 >>> saturated("12:0")
 True
 
->>>max_carbon("12:0", 16)
+>>> max_carbon("12:0", 16)
 True
 
->>>max_carbon("21:3", 16)
+>>> max_carbon("21:3", 16)
 False
 
 >>> my_lipids = ["12:0", "17:1", "24:0", "24:1", "24:2", "26:3"]
