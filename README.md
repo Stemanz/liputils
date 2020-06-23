@@ -13,9 +13,6 @@ The ```Lipid``` class takes care of extracting information from the lipid name:
 
 >>> l = Lipid("PG 18:1/20:1", amount=0.012512)
 
->>> l.mass
-802.5724
-
 >>> l.lipid_class()
 'PG'
 
