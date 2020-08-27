@@ -8,14 +8,14 @@ A small Python package to manipulate complex lipids.
 
 **Check it out**! We have a paper out in Scientific Reports, with detailed step-by-step installation and usage protocols, and real use cases implemented and discussed:
 
-
 **liputils: a Python module to manage individual fatty acid moieties from complex lipids**
 
 *Stefano Manzini, Marco Busnelli, Alice Colombo, Mostafa Kiamehr, Giulia Chiesa*
 
-PMID: 32770020  PMCID: [PMC7415148](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc7415148/)  DOI: [10.1038/s41598-020-70259-9](https://doi.org/10.1038/s41598-020-70259-9) 
- ![http://dx.doi.org/10.1038/s41598-020-70259-9](https://github.com/Stemanz/liputils/raw/master/images/npg.gif)
- ![https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/32770020/](https://github.com/Stemanz/liputils/raw/master/images/pmc.png)
+PMID: [32770020](https://pubmed.ncbi.nlm.nih.gov/32770020/) PMCID: [PMC7415148](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc7415148/) DOI: [10.1038/s41598-020-70259-9](https://doi.org/10.1038/s41598-020-70259-9)
+
+![http://dx.doi.org/10.1038/s41598-020-70259-9](https://github.com/Stemanz/liputils/raw/master/images/npg.gif)
+![https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/32770020/](https://github.com/Stemanz/liputils/raw/master/images/pmc.png)
 
 ---
 
