@@ -5,6 +5,7 @@ A small Python package to manipulate complex lipids.
 ```liputils``` makes it easy to strip fatty acids-like residues from individual molecular lipids. This is done by ```liputils``` by parsing the lipid string identifier.
 
 **Check it out**! We have a paper out in Scientific Reports, with detailed step-by-step installation and usage protocols, and real use cases implemented and discussed.
+
 ![http://dx.doi.org/10.1038/s41598-020-70259-9](https://github.com/Stemanz/liputils/raw/master/images/npg.gif)
 ![https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/32770020/](https://github.com/Stemanz/liputils/raw/master/images/pmc.png)
 
