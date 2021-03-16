@@ -1,5 +1,5 @@
-from .liputils import Lipid, make_residues_table, saturated, max_carbon
+from .liputils import Lipid, make_residues_table, saturated, max_carbon, GUI
 
-__all__ = ("Lipid", "make_residues_table", "saturated", "max_carbon")
+__all__ = ("Lipid", "make_residues_table", "saturated", "max_carbon", "GUI")
 
-__version__ = "0.16.0"
+__version__ = "0.16.1"
