@@ -16,7 +16,7 @@ setup(
     url="https://github.com/Stemanz/liputils",
     download_url="https://github.com/Stemanz/liputils/archive/master.zip",
     license="GPL-3.0",
-    packages=find_packages(exclude=("tests", "docs", "images", "devel")),
+    packages=find_packages(exclude=("tests", "docs", "images", "devel", "sample_data")),
     keywords = ['lipids', 'lipids residues', 'lipidomics'],
     install_requires=[
           'numpy',
