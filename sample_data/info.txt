@@ -1,0 +1,5 @@
+Source: https://www.nature.com/articles/srep44503#Sec23
+
+Liver-specific deletion of the Plpp3 gene alters plasma lipid composition and worsens atherosclerosis in apoE(-/-) mice.
+Busnelli M, Manzini S, Hilvo M, Parolini C, Ganzetti GS, Dellera F, Ekroos K, Jänis M, Escalante-Alcalde D, Sirtori CR, Laaksonen R, Chiesa G.
+Sci Rep. 2017 Mar 14;7:44503. doi: 10.1038/srep44503.
