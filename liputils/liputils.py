@@ -1347,7 +1347,7 @@ def GUI():
 
     # left frame (action buttons) -- -- -- -- -- -- 
     ACTION_FRAME_HEIGHT = GUI_HEIGHT
-    ACTION_FRAME_WIDTH = 212 # 640 - 212 = 428
+    ACTION_FRAME_WIDTH = 212
     action_frame = tk.Frame(
         root,
         width=ACTION_FRAME_WIDTH,
@@ -1566,7 +1566,7 @@ def GUI():
         print(liptype_var.get())
 
     liptypes = [
-        ("refmet", "refmet"),
+        ("RefMet", "refmet"),
         ("Other", "none") # careful here, "none" --> None
     ]
     for option_to_show, value in liptypes:
