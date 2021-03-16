@@ -7,6 +7,16 @@ import pandas as pd
 import numpy as np
 from numpy import average
 
+import webbrowser
+try:
+    import tkinter as tk
+    from tkinter import messagebox
+    from tkinter import filedialog
+    tkinter_import = True
+except ImportError:
+    tkinter_import = False
+
+
 class Lipid:
     """
     A class for lipids. Use like lipid = Lipid("CE 12:0")
@@ -1313,3 +1323,272 @@ def max_carbon(stringlike, carbon):
             return False
     except (TypeError, ValueError):
         raise TypeError(f"'{stringlike}' must be in the form (example): '20:3'")
+
+
+def GUI():
+    if not tkinter_import:
+        print("Tkinter does not appear to be available: can't spawn the GUI.")
+        return
+
+    GUI_HEIGHT = 350
+    GUI_WIDTH = 440
+    GEOMETRY=str(GUI_WIDTH)+"x"+str(GUI_HEIGHT)
+    ACTIONS_BGCOLOR = "white"
+    OPTIONS_BGCOLOR = "white"
+
+    root = tk.Tk()
+    root.geometry(GEOMETRY)
+    root.resizable(False, False)
+    root.title("liputils GUI")
+    root.after(1, lambda: root.focus_force())
+
+    def dummy_cmd():
+        print("A dummy command was issued.")
+
+    # left frame (action buttons) -- -- -- -- -- -- 
+    ACTION_FRAME_HEIGHT = GUI_HEIGHT
+    ACTION_FRAME_WIDTH = 212 # 640 - 212 = 428
+    action_frame = tk.Frame(
+        root,
+        width=ACTION_FRAME_WIDTH,
+        height=ACTION_FRAME_HEIGHT,
+        bd=5,   # borderwidth
+        bg=ACTIONS_BGCOLOR, # background
+        highlightbackground="black",
+        highlightcolor="black",
+        highlightthickness=0,
+    )
+
+    action_kwargs = {
+        "font": ("Helvetica", 18, "bold"),
+        "bg": ACTIONS_BGCOLOR,
+        "height": 2,
+    }
+    tk.Label(action_frame, text="Actions", **action_kwargs).pack()
+
+    button_kws = {
+        "padx": 5, #that's in pixel
+        "activeforeground": "blue",
+        "width": 12,
+    }
+
+    input_filename_var = tk.StringVar()
+    def get_input_filename():
+        returnfile = tk.filedialog.askopenfilename(
+            title='Select input table',
+            filetypes=[
+                ('Old excel file', '.xls'),
+                ('Excel file', '.xlsx'),
+                ('Comma separated values', '.csv'),
+                ('Tab separated values', '.tsv'),
+                ('Tab delimited text', '.tdt')
+            ],
+        )
+        if not len(returnfile) == 0:
+            input_filename_var.set(returnfile)
+            print(f"Chosen file: {returnfile}")
+        if len(returnfile) == 0: # if one hits "cancel"
+            return
+    button_load = tk.Button(
+        action_frame,
+        text=" (1) Load table ",
+        pady=6, # vertical padding
+        command=get_input_filename,
+        **button_kws)
+    button_load.pack()
+
+    def process():
+        input_filename = input_filename_var.get()
+
+        if len(input_filename) == 0:
+            tk.messagebox.showerror(
+                title="Select a table to work with first",
+                message="Hit '(1) Load table' first."
+        )
+            return
+
+        output_filename_var = tk.StringVar()
+        returnfile = tk.filedialog.asksaveasfilename(
+            defaultextension=".tsv",
+            filetypes=[
+                #('Old excel file', '.xls'),
+                ('Excel file', '.xlsx'),
+                ('Comma separated values', '.csv'),
+                ('Tab separated values', '.tsv'),
+                ('Tab delimited text', '.tdt')
+            ],
+            title="Choose output filename",
+        )
+        if not len(returnfile) == 0:
+            output_filename_var.set(returnfile)
+        else:
+            return
+
+        output_filename = output_filename_var.get()
+
+        print("Loading input table.")
+        if input_filename.endswith((".xlsx", ".xls")):
+            df = pd.read_excel(input_filename, index_col=0)
+        elif input_filename.endswith((".tdt", ".tsv")):
+            sep = "\t"
+            df = pd.read_csv(input_filename, sep=sep, index_col=0)
+        else:
+            sep = ","
+            df = pd.read_csv(input_filename, sep=sep, index_col=0)
+        print("Input table loaded.")
+
+        print("Running liputils..")
+        liptype_chosen = liptype_var.get()
+        if liptype_chosen == "none":
+            liptype_chosen = None
+        res = make_residues_table(
+            df,
+            drop_ambiguous=drop_ambiguous_var.get(),
+            liptype=liptype_chosen
+            )
+        print("Done.")
+
+        print("Saving output file..")
+        if output_filename.endswith(".xlsx"):
+            res.to_excel(output_filename)
+        elif output_filename.endswith((".tsv", ".tdt")):
+            res.to_csv(output_filename, sep="\t")
+        elif output_filename.endswith(".csv",):
+            res.to_csv(output_filename, sep=",")
+        else:
+            print("Not sure what format was chosen. Trying to save anyway")
+            res.to_csv(output_filename)
+        print("Done.")
+        print(f"File saved: {output_filename}")
+        tk.messagebox.showerror(
+                title="Liputils has finished processing the table",
+                message=f"Find your results here:\n{output_filename}"
+        )
+    button_process = tk.Button(
+        action_frame,
+        text=" (2) Process ",
+        pady=6, # vertical padding
+        command=process,
+        **button_kws)
+    button_process.pack()
+
+    tk.Label(action_frame, text="---", bg="white").pack()
+
+    button_online_doc = tk.Button(
+        action_frame,
+        text=" Online doc ",
+        pady=6, # vertical padding
+        command=lambda: webbrowser.open("https://github.com/Stemanz/liputils"),
+        **button_kws)
+    button_online_doc.pack()
+
+    sample_url="https://github.com/Stemanz/liputils/raw/master/sample_data/liputils%20sample%20data.xlsx"
+    button_getsample = tk.Button(
+        action_frame,
+        text=" Get sample input file ",
+        pady=6, # vertical padding
+        command=lambda: webbrowser.open(sample_url),
+        **button_kws)
+    button_getsample.pack()
+
+    button_getpaper = tk.Button(
+        action_frame,
+        text=" Download paper ",
+        pady=6, # vertical padding
+        command=lambda: webbrowser.open("https://pubmed.ncbi.nlm.nih.gov/32770020/"),
+        **button_kws)
+    button_getpaper.pack()
+
+    def display_messagebox_citation():
+        tk.messagebox.showinfo(
+            title="How to cite",
+            message="liputils: a Python module to manage individual fatty acid moieties from complex lipids.\nManzini S, Busnelli M, Colombo A, Kiamehr M, Chiesa G.\nSci Rep. 2020 Aug 7;10(1):13368.\ndoi: 10.1038/s41598-020-70259-9.\nPMID: 32770020 "
+        )
+    button_howtocite = tk.Button(
+        action_frame,
+        text=" How to cite ",
+        pady=6, # vertical padding
+        command=display_messagebox_citation,
+        **button_kws)
+    button_howtocite.pack()
+
+
+    action_frame.pack(side=tk.LEFT)
+    # end of left frame (action frame) - - -
+
+    # right frame (options) -- -- -- -- -- -- 
+    OPTIONS_FRAME_HEIGHT = GUI_HEIGHT
+    #OPTIONS_FRAME_WIDTH = 428 # 640 - 212 = 428
+    options_frame = tk.Frame(
+        root,
+        width=OPTIONS_FRAME_HEIGHT,
+        #height=OPTIONS_FRAME_WIDTH,
+        bd=5,   # borderwidth
+        bg=OPTIONS_BGCOLOR, # background
+        highlightbackground="black",
+        highlightcolor="black",
+        highlightthickness=0,
+    )
+
+    options_kwargs = {
+        "font": ("Helvetica", 18, "bold"),
+        "bg": OPTIONS_BGCOLOR,
+        "height": 2,
+    }
+    tk.Label(options_frame, text="Options", **options_kwargs).pack()
+
+    drop_ambiguous_var=tk.BooleanVar()
+    drop_ambiguous_var.set(True)
+    drop_ambiguous_checkbutton = tk.Checkbutton(
+        options_frame,
+        text="drop_ambiguous",
+        variable=drop_ambiguous_var,
+        bg=OPTIONS_BGCOLOR,
+    )
+    drop_ambiguous_checkbutton.pack()
+    tk.Label(
+        options_frame,
+        text="(Exclude mass isobars from the analysis)",
+        font=("Helvetica", 12, "italic"),
+        bg=OPTIONS_BGCOLOR,
+    ).pack()
+
+    tk.Label(options_frame, text=" ", height=1, bg=OPTIONS_BGCOLOR).pack() # spacer
+    tk.Label(
+        options_frame,
+        text="Select the input lipid identifiers type",
+        bg=OPTIONS_BGCOLOR,
+    ).pack()
+
+    liptype_var = tk.StringVar()
+    liptype_var.set("none")
+    def printcane():
+        print(liptype_var.get())
+
+    liptypes = [
+        ("refmet", "refmet"),
+        ("Other", "none") # careful here, "none" --> None
+    ]
+    for option_to_show, value in liptypes:
+        tk.Radiobutton(
+            options_frame,
+            indicatoron=0,
+            text=option_to_show,
+            value=value, #this will be set into the variable
+            width=20,
+            padx=20,
+            variable=liptype_var,
+            command=printcane,
+
+        ).pack(anchor=tk.N)
+
+
+    options_frame.pack(side=tk.RIGHT)
+    # end of right frame (options) - - -
+
+    root.update()
+    root.deiconify()
+    root.mainloop()
+
+if "__name__" == "__main__":
+    main_GUI()
