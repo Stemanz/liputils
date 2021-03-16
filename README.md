@@ -31,7 +31,7 @@ The swiftest way to convert your lipidomic data into a residue count (usually gi
 
 This brings up the GUI (here's what it looks like in MacOS):
 
-![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_gui_OSX.png)
 
 The GUI acts as a wrapper for ```make_residues_table()```, enabling a fast two-click conversion of any source table. All is required is to **1) choose the table** to convert and 2) **Process** the table. When hitting ```(2) Process```, the user is first asked to choose where to put and how to call the newly produced table, then everything happens automatically. _That's it!_
 
