@@ -21,6 +21,24 @@ PMID: [32770020](https://pubmed.ncbi.nlm.nih.gov/32770020/) PMCID: [PMC7415148](
 
 Tracking individual residues is is particularly useful when wanting to track how the carbon chains move across the lipidome, independently from where they are attached to. For instance, it is possible to see if the general trend of long carbon residues in the plasma matches the data available from the dietary treatment.
 
+The swiftest way to convert your lipidomic data into a residue count (usually given in submolar fractions) is by using liputils' built-in GUI:
+
+```python
+>>> from liputils import GUI
+
+>>> GUI()
+```
+
+This brings up the GUI (here's what it looks like in MacOS):
+
+![](https://github.com/Stemanz/liputils/raw/master/images/liputils_processed_sample_table.png)
+
+The GUI acts as a wrapper for ```make_residues_table()```, enabling a fast two-click conversion of any source table. All is required is to **1) choose the table** to convert and 2) **Process** the table. When hitting ```(2) Process```, the user is first asked to choose where to put and how to call the newly produced table, then everything happens automatically. _That's it!_
+
+Of course we've taking a lot for granted, but this was just a quick start, dig down in the doc to find out things like **how data needs to be shaped** or **what lipid identifiers are supported**, as well as what else ```liputils``` can do for you within a Python REPL.
+
+---
+
 The ```Lipid``` class takes care of extracting information from the lipid name:
 
 ```python
