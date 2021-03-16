@@ -35,7 +35,7 @@ This brings up the GUI (here's what it looks like in MacOS):
 
 The GUI acts as a wrapper for ```make_residues_table()```, enabling a fast two-click conversion of any source table. All is required is to **1) choose the table** to convert and 2) **Process** the table. When hitting ```(2) Process```, the user is first asked to choose where to put and how to call the newly produced table, then everything happens automatically. _That's it!_ Try running it with default settings _(the ones the GUI starts up with)_ on the [sample data](https://github.com/Stemanz/liputils/raw/master/sample_data/liputils%20sample%20data.xlsx).
 
-Of course we've taking a lot for granted, but this was just a quick start, dig down in the doc to find out things like **how data needs to be shaped** or **what lipid identifiers are supported**, as well as what else ```liputils``` can do for you within a Python REPL.
+Of course we're taking a lot for granted, but this was just a quick start, dig down in the doc to find out things like **how data needs to be shaped** or **what lipid identifiers are supported**, as well as what else ```liputils``` can do for you within a Python REPL.
 
 ---
 
