@@ -15,7 +15,7 @@ A small Python package to manipulate complex lipids.
 PMID: [32770020](https://pubmed.ncbi.nlm.nih.gov/32770020/) PMCID: [PMC7415148](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc7415148/) DOI: [10.1038/s41598-020-70259-9](https://doi.org/10.1038/s41598-020-70259-9)
 
 [![Download from Nature Publishing Group](https://github.com/Stemanz/liputils/raw/master/images/npg.png)](http://dx.doi.org/10.1038/s41598-020-70259-9)
-[![Download from PumBed Central](https://github.com/Stemanz/liputils/raw/master/images/pmc.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/32770020/)
+[![Download from PubMed Central](https://github.com/Stemanz/liputils/raw/master/images/pmc.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/32770020/)
 
 ---
 
